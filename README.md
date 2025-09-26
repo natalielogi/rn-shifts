@@ -1,16 +1,23 @@
 # RN Shifts
 
-Тестовое задание: React Native (CLI, без Expo).
-Приложение показывает список смен по геолокации и экран деталей (данные берём из ранее загруженного списка).
+Тестовое: React Native (CLI, TypeScript, без Expo).  
+Приложение показывает список смен рядом с пользователем (по геолокации) и экран деталей.
+Данные для деталей берём из уже загруженного списка (без повторного запроса).
 
 ## Стек
+
 - React Native CLI + TypeScript
-- react-navigation/native-stack
+- react-navigation / native-stack
 - MobX (mobx, mobx-react-lite)
+- react-native-geolocation-service
 
-## Запуск
-- iOS: `npx pod-install && npm run ios`
-- Android: `npm run android` (при установленном Android SDK/эмуляторе)
+## Как запустить (iOS)
 
-## Структура (план)
-
+```bash
+npm i
+npx pod-install
+# терминал 1
+npx react-native start
+# терминал 2
+npm run ios   # или открыть ios/RnShifts.xcworkspace в Xcode и Cmd+R
+```

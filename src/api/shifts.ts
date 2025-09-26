@@ -34,7 +34,6 @@ export async function getShiftsByCoords(
     const url = build(lat, lon);
     try {
       const res = await fetch(url, { headers: { Accept: 'application/json' } });
-      console.log('[API] GET', url, '→', res.status);
       if (res.status === 404) return []; 
       if (!res.ok) {
         lastStatus = res.status;

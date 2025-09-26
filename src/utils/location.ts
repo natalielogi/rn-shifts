@@ -9,7 +9,6 @@ export async function requestLocation(): Promise<{ lat: number; lon: number }> {
         maximumAge: 0,
       }),
     );
-    console.log('[GEO]', pos.coords.latitude, pos.coords.longitude);
     return { lat: pos.coords.latitude, lon: pos.coords.longitude };
   } catch (e: any) {
     await Geolocation.requestAuthorization('whenInUse');
